@@ -9,7 +9,7 @@ Deployment: Cloudflare Workers; SQLite-backed Durable Objects persist separately
 - Gameplay and interface source commit: `66a6203c74c8b86ec77b0301ae5963cb2f007cce` (PR #5).
 - Cloudflare-deployed workflow commit: `a37e9edd6420aab0bd2f21661e14d28afda682cd` (same gameplay code).
 - **First-choice rollback Worker version:** `6e12e16f-b771-4ac6-9e07-b5d41327c035`
-- Verified production deployment: https://github.com/Adityasuresh109/Mafia/actions/runs/39181674996
+- Verified production deployment: https://github.com/TheCuriosityLab109/Mafia/actions/runs/39181674996
 - Evidence: **40/40 automated tests**, live 60-second runoff discussion, 60-second auto-closing vote, early host vote closure, role-redacted player history, complete room/host recovery, Doctor save, Police secrecy, and Town victory.
 - The temporary one-time release workflow was removed immediately after verification. The normal `.github/workflows/deploy.yml` still requires explicit manual workflow dispatch.
 - **Release changes:** discreet one-second self-role card, names-only player deaths/history while retaining full host details, server-timed 60-second votes in both voting phases.
@@ -20,7 +20,7 @@ Deployment: Cloudflare Workers; SQLite-backed Durable Objects persist separately
 
 - Source commit (game and runtime): `e491178d7e8755c2252e0ef43831a3f09bc7d992`
 - Cloudflare version ID: `34da72d7-3ec5-4be4-b684-ccaa7a0ba177`
-- Production verification: https://github.com/Adityasuresh109/Mafia/actions/runs/38823567567 (successful second attempt).
+- Production verification: https://github.com/TheCuriosityLab109/Mafia/actions/runs/38823567567 (successful second attempt).
 - Evidence: **33/33 automated tests**, real Cloudflare **60-second runoff alarm**, Doctor save, two rounds of Police checks, revealed roles, persisted public history, restricted voting and Town victory; basic room/join/host-recovery security smoke passed.
 - The deployment workflow was subsequently switched to **manual dispatch only**, with serialized deployments. Workflow/docs commits after the source commit do not change this pinned Worker version.
 - **Rollback target:** Use this version ID as the first-choice known-good rollback target until a newer version passes the same gates.
@@ -29,7 +29,7 @@ Deployment: Cloudflare Workers; SQLite-backed Durable Objects persist separately
 
 - Source commit: `4aa40eec0e84c82170b1472ecfa5923e67467e68`
 - Cloudflare Worker version ID: `27e3e032-4843-4284-8618-668c45142ebc`
-- Evidence: successful GitHub Actions run https://github.com/Adityasuresh109/Mafia/actions/runs/38819082278 (attempt 2): tests, live room flow and production smoke passed.
+- Evidence: successful GitHub Actions run https://github.com/TheCuriosityLab109/Mafia/actions/runs/38819082278 (attempt 2): tests, live room flow and production smoke passed.
 - Caveat: that version contains the auditor's **runoff timer defect**. It is a fallback baseline, **not** a recommended party-night release.
 
 ## Before the party
